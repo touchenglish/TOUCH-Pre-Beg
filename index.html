@@ -281,7 +281,8 @@ body.sound-off .spk{opacity:.3;pointer-events:none}
 /* speak up */
 .speaksent{background:var(--gold-soft);border:2px solid #E9D4A3;border-radius:18px;padding:18px;text-align:center;margin:6px 0 16px}
 .speaksent .ss{font-family:var(--font-display);font-weight:700;font-size:21px;color:#6F4A12;line-height:1.35}
-.recstatus{min-height:24px;text-align:center;font-weight:800;font-size:14px;color:var(--bad-d);margin-bottom:12px}
+.recstatus{min-height:24px;text-align:center;font-weight:800;font-size:15px;color:var(--bad-d);margin-bottom:12px;font-family:var(--font-display)}
+.recstatus.go{color:var(--success-d);font-size:17px;animation:pop .2s ease-out}
 .recdot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--bad);margin-right:7px;animation:blinkdot 1s infinite}
 @keyframes blinkdot{0%,100%{opacity:1}50%{opacity:.25}}
 .recrow{display:flex;gap:10px;flex-wrap:wrap}
@@ -565,9 +566,9 @@ const COURSE = [{"id":"m1","title":{"zh":"问候与自我介绍","ms":"Salam & P
 
 /* ---------- UI strings ---------- */
 const UI = {
- zh:{continue:"Continue",check:"Check",start:"Start",resume:"Resume",startLesson:"Start Lesson",correct:"Correct!",wrong:"Not quite",answerIs:"Correct answer:",vocab:"Vocabulary",patterns:"Sentence Patterns",fill:"Fill in the Blank",sub:"Substitution",order:"Word Order",trans:"Translation",mcq:"Multiple Choice",dialog:"Dialogue",boss:"BOSS CHALLENGE",lessonDone:"Lesson Complete!",bossDone:"Boss Defeated!",resSub:"Lesson complete. Next lesson unlocked.",accuracy:"Accuracy",locked:"Locked",done:"Done",go:"In progress",new:"Start",lesson:"Lesson",lessonU:"",module:"Module",bonus:"Completion bonus",bossBonus:"Boss bonus",heroNew:"Start your English journey here.",heroCont:"Continue where you left off.",allDone:"Congratulations! You finished the whole Pre-Beginner Level! 🎉",step:"Step",sceneLbl:"Scene",you:"You",changeLang:"Change explanation language?",menuTitle:"Menu",cancel:"Close",saveLocal:"Save to Device",quitYes:"Quit",quitNo:"Keep Learning",soundOn:"🔊 Sound on",soundOff:"🔇 Sound off",reviewLbl:"Today's Review",reviewN:"{n} questions to review",reviewNow:"Review",allCaught:"All caught up 🎉",noReview:"No review needed right now.",reviewDone:"Review Complete!",clearedMsg:"{c} cleared · {r} still to review.",reviewAgain:"Keep Reviewing",mistakes:"Mistakes to Review",praise:["Correct!","Excellent!","Great job!","Perfect!","Keep it up!"],combo:"Combo",nextUp:"Next",backHome:"Home",dailyGoal:"Daily Goal",goalDone:"🎉 Daily goal reached!",courseProg:"Course Progress",streakMile:"🔥 {n} days in a row! Amazing!",navHome:"Map",navProfile:"Profile",achTitle:"Achievements",statLessons:"Lessons",statStreak:"Day Streak",student:"Touch Student",editName:"Edit name",saveName:"Save",cpSub:"Pre-Beginner Level",startFlag:"START HERE",toNext:"{n} XP to Lv {lv}",listen:"Listening Match",meaningIs:"Meaning:",nlTag:"Next Level",nlLocked:"Locked · {n}/25 lessons",nlSoon:"Coming soon 🎉",obTitle:"Welcome! 👋",obSkip:"Skip",speakTitle:"Speak Up",record:"Record",stopBtn:"Stop",play:"Play",tryAgain:"Try Again",speakSay:"Say this sentence:",recState:"Recording…",vocabSub:"先认读这些单词，再继续。",tapSpk:"点喇叭按钮听单词发音；点选词块时也会自动朗读。",patternsSub:"___ 是可替换的位置。",fillSub:"选出正确的词。",subSub:"点选一个词，替换进句型。",subBuilt:"很好！你造了这个句子：",orderSub:"点击单词，排出正确顺序。",transSub:"把句子翻译成英文（点词组句）。",mcqSub:"选出最合适的答案。",dialogSub:"点词组句，完成你的台词。",bossSub:"无提示！靠自己完成对话。",reviewFrom:"来自你之前做错的题目，答对后会从这里移除。",quit:"退出本关？本关进度不会保存。",menuSub:"切换解释语言，或把进度保存到本设备（进度也会自动保存）。",saved:"✓ 已保存到本设备（刷新后会恢复）",savedMem:"已保存到本次会话（此浏览器不支持本地存储）",listenSub:"点喇叭听发音，再点对应的英文单词，把它们配对。",nlDesc:"学会日常交流中基础的单词、短语和语法概念：一般现在时、家庭成员、购物与钱、问路指路。",nlToastLocked:"完成全部 25 关即可解锁 Level 1。继续加油！",nlToastSoon:"🎉 你已完成 Pre-Beginner！Level 1 正在制作中，敬请期待。",obSub:"我们要怎么称呼你？你的名字会出现在练习里（例如 My name is …），之后也可以在 Profile 里修改。",obHello:"你好，{name}！",listenMuted:"声音已关闭，本听力练习已跳过。想练听力可在右上角打开声音。",speakSub:"先开口说，再听听自己的声音；想重来就再录一次。不评分、不上传，录音只保存在你自己的设备里。",speakDenied:"无法使用麦克风（可能未授权）。没关系，点 Continue 继续，不影响通关。",speakSaved:"✓ 已录好，保存在本机。点 Play 听听自己的发音！",speakSavedHint:"找到你上次的录音了，点 Play 可以回听，或再录一次。"},
- ms:{continue:"Continue",check:"Check",start:"Start",resume:"Resume",startLesson:"Start Lesson",correct:"Correct!",wrong:"Not quite",answerIs:"Correct answer:",vocab:"Vocabulary",patterns:"Sentence Patterns",fill:"Fill in the Blank",sub:"Substitution",order:"Word Order",trans:"Translation",mcq:"Multiple Choice",dialog:"Dialogue",boss:"BOSS CHALLENGE",lessonDone:"Lesson Complete!",bossDone:"Boss Defeated!",resSub:"Lesson complete. Next lesson unlocked.",accuracy:"Accuracy",locked:"Locked",done:"Done",go:"In progress",new:"Start",lesson:"Lesson",lessonU:"",module:"Module",bonus:"Completion bonus",bossBonus:"Boss bonus",heroNew:"Start your English journey here.",heroCont:"Continue where you left off.",allDone:"Congratulations! You finished the whole Pre-Beginner Level! 🎉",step:"Step",sceneLbl:"Scene",you:"You",changeLang:"Change explanation language?",menuTitle:"Menu",cancel:"Close",saveLocal:"Save to Device",quitYes:"Quit",quitNo:"Keep Learning",soundOn:"🔊 Sound on",soundOff:"🔇 Sound off",reviewLbl:"Today's Review",reviewN:"{n} questions to review",reviewNow:"Review",allCaught:"All caught up 🎉",noReview:"No review needed right now.",reviewDone:"Review Complete!",clearedMsg:"{c} cleared · {r} still to review.",reviewAgain:"Keep Reviewing",mistakes:"Mistakes to Review",praise:["Correct!","Excellent!","Great job!","Perfect!","Keep it up!"],combo:"Combo",nextUp:"Next",backHome:"Home",dailyGoal:"Daily Goal",goalDone:"🎉 Daily goal reached!",courseProg:"Course Progress",streakMile:"🔥 {n} days in a row! Amazing!",navHome:"Map",navProfile:"Profile",achTitle:"Achievements",statLessons:"Lessons",statStreak:"Day Streak",student:"Touch Student",editName:"Edit name",saveName:"Save",cpSub:"Pre-Beginner Level",startFlag:"START HERE",toNext:"{n} XP to Lv {lv}",listen:"Listening Match",meaningIs:"Meaning:",nlTag:"Next Level",nlLocked:"Locked · {n}/25 lessons",nlSoon:"Coming soon 🎉",obTitle:"Welcome! 👋",obSkip:"Skip",speakTitle:"Speak Up",record:"Record",stopBtn:"Stop",play:"Play",tryAgain:"Try Again",speakSay:"Say this sentence:",recState:"Recording…",vocabSub:"Baca dan ingat perkataan ini dahulu.",tapSpk:"Tekan butang pembesar suara untuk dengar sebutan; perkataan juga dibaca apabila ditekan.",patternsSub:"___ ialah slot yang boleh diganti.",fillSub:"Pilih perkataan yang betul.",subSub:"Tekan satu perkataan untuk diganti ke dalam pola.",subBuilt:"Bagus! Anda membina ayat ini:",orderSub:"Tekan perkataan mengikut susunan yang betul.",transSub:"Terjemah ke Bahasa Inggeris (tekan perkataan).",mcqSub:"Pilih jawapan yang paling sesuai.",dialogSub:"Tekan perkataan untuk melengkapkan dialog anda.",bossSub:"Tiada petunjuk! Lengkapkan dialog sendiri.",reviewFrom:"Daripada jawapan yang anda silap; jawab betul untuk mengeluarkannya.",quit:"Keluar? Kemajuan pelajaran ini tidak disimpan.",menuSub:"Tukar bahasa penerangan atau simpan kemajuan ke peranti ini (kemajuan juga disimpan secara automatik).",saved:"✓ Disimpan ke peranti ini (kekal selepas muat semula)",savedMem:"Disimpan untuk sesi ini sahaja (pelayar tidak menyokong storan)",listenSub:"Tekan pembesar suara untuk dengar, kemudian tekan perkataan Inggeris yang sepadan.",nlDesc:"Pelajari perkataan, frasa dan konsep tatabahasa asas untuk komunikasi harian: present simple, ahli keluarga, membeli-belah & wang, bertanya arah.",nlToastLocked:"Tamatkan semua 25 pelajaran untuk membuka Level 1. Teruskan!",nlToastSoon:"🎉 Anda telah tamat Pre-Beginner! Level 1 sedang dibina.",obSub:"Apa nama anda? Nama anda akan muncul dalam latihan (cth. My name is …). Anda boleh menukarnya di Profile bila-bila masa.",obHello:"Hai, {name}!",listenMuted:"Bunyi dimatikan, latihan mendengar ini dilangkau. Hidupkan bunyi di penjuru atas untuk mencubanya.",speakSub:"Cakap dahulu, kemudian dengar suara anda sendiri; rakam semula jika mahu. Tiada markah, tiada muat naik — rakaman disimpan dalam peranti anda sahaja.",speakDenied:"Mikrofon tidak dapat digunakan (mungkin tiada kebenaran). Tidak mengapa, tekan Continue untuk teruskan.",speakSaved:"✓ Rakaman disimpan dalam peranti ini. Tekan Play untuk dengar sebutan anda!",speakSavedHint:"Rakaman lepas anda dijumpai. Tekan Play untuk dengar, atau rakam semula."},
- en:{continue:"Continue",check:"Check",start:"Start",resume:"Resume",startLesson:"Start Lesson",correct:"Correct!",wrong:"Not quite",answerIs:"Correct answer:",vocab:"Vocabulary",patterns:"Sentence Patterns",fill:"Fill in the Blank",sub:"Substitution",order:"Word Order",trans:"Translation",mcq:"Multiple Choice",dialog:"Dialogue",boss:"BOSS CHALLENGE",lessonDone:"Lesson Complete!",bossDone:"Boss Defeated!",resSub:"Lesson complete. Next lesson unlocked.",accuracy:"Accuracy",locked:"Locked",done:"Done",go:"In progress",new:"Start",lesson:"Lesson",lessonU:"",module:"Module",bonus:"Completion bonus",bossBonus:"Boss bonus",heroNew:"Start your English journey here.",heroCont:"Continue where you left off.",allDone:"Congratulations! You finished the whole Pre-Beginner Level! 🎉",step:"Step",sceneLbl:"Scene",you:"You",changeLang:"Change explanation language?",menuTitle:"Menu",cancel:"Close",saveLocal:"Save to Device",quitYes:"Quit",quitNo:"Keep Learning",soundOn:"🔊 Sound on",soundOff:"🔇 Sound off",reviewLbl:"Today's Review",reviewN:"{n} questions to review",reviewNow:"Review",allCaught:"All caught up 🎉",noReview:"No review needed right now.",reviewDone:"Review Complete!",clearedMsg:"{c} cleared · {r} still to review.",reviewAgain:"Keep Reviewing",mistakes:"Mistakes to Review",praise:["Correct!","Excellent!","Great job!","Perfect!","Keep it up!"],combo:"Combo",nextUp:"Next",backHome:"Home",dailyGoal:"Daily Goal",goalDone:"🎉 Daily goal reached!",courseProg:"Course Progress",streakMile:"🔥 {n} days in a row! Amazing!",navHome:"Map",navProfile:"Profile",achTitle:"Achievements",statLessons:"Lessons",statStreak:"Day Streak",student:"Touch Student",editName:"Edit name",saveName:"Save",cpSub:"Pre-Beginner Level",startFlag:"START HERE",toNext:"{n} XP to Lv {lv}",listen:"Listening Match",meaningIs:"Meaning:",nlTag:"Next Level",nlLocked:"Locked · {n}/25 lessons",nlSoon:"Coming soon 🎉",obTitle:"Welcome! 👋",obSkip:"Skip",speakTitle:"Speak Up",record:"Record",stopBtn:"Stop",play:"Play",tryAgain:"Try Again",speakSay:"Say this sentence:",recState:"Recording…",vocabSub:"Read and remember these words first.",tapSpk:"Tap the speaker button to hear the word; words are also spoken when you tap them.",patternsSub:"___ is a slot you can replace.",fillSub:"Choose the correct word.",subSub:"Tap one word to put into the pattern.",subBuilt:"Good! You made this sentence:",orderSub:"Tap the words in the correct order.",transSub:"Translate into English (tap the words).",mcqSub:"Choose the best answer.",dialogSub:"Tap the words to finish your line.",bossSub:"No hints! Finish the dialogue by yourself.",reviewFrom:"From answers you missed; answer correctly to clear them.",quit:"Quit this lesson? Progress will not be saved.",menuSub:"Change the explanation language or save progress to this device (progress also saves automatically).",saved:"✓ Saved to this device (kept after refresh)",savedMem:"Saved for this session only (browser storage unavailable)",listenSub:"Tap a speaker to listen, then tap the matching English word.",nlDesc:"Learn basic words, phrases and grammar for everyday communication: present simple, family, shopping & money, asking for directions.",nlToastLocked:"Complete all 25 lessons to unlock Level 1. Keep going!",nlToastSoon:"🎉 You finished Pre-Beginner! Level 1 is coming soon.",obSub:"What should we call you? Your name will appear inside the exercises (e.g. My name is …). You can change it in Profile anytime.",obHello:"Hello, {name}!",listenMuted:"Sound is off, so this listening exercise is skipped. Turn sound on (top right) to try it.",speakSub:"Speak first. Listen to yourself. Try again if you want. No score, no upload — your recording stays on your own device.",speakDenied:"Microphone unavailable (permission may be blocked). No problem — tap Continue to move on.",speakSaved:"✓ Recorded and saved on this device. Tap Play to hear yourself!",speakSavedHint:"Found your last recording. Tap Play to listen, or record again."}
+ zh:{continue:"Continue",check:"Check",start:"Start",resume:"Resume",startLesson:"Start Lesson",correct:"Correct!",wrong:"Not quite",answerIs:"Correct answer:",vocab:"Vocabulary",patterns:"Sentence Patterns",fill:"Fill in the Blank",sub:"Substitution",order:"Word Order",trans:"Translation",mcq:"Multiple Choice",dialog:"Dialogue",boss:"BOSS CHALLENGE",lessonDone:"Lesson Complete!",bossDone:"Boss Defeated!",resSub:"Lesson complete. Next lesson unlocked.",accuracy:"Accuracy",locked:"Locked",done:"Done",go:"In progress",new:"Start",lesson:"Lesson",lessonU:"",module:"Module",bonus:"Completion bonus",bossBonus:"Boss bonus",heroNew:"Start your English journey here.",heroCont:"Continue where you left off.",allDone:"Congratulations! You finished the whole Pre-Beginner Level! 🎉",step:"Step",sceneLbl:"Scene",you:"You",changeLang:"Change explanation language?",menuTitle:"Menu",cancel:"Close",saveLocal:"Save to Device",quitYes:"Quit",quitNo:"Keep Learning",soundOn:"🔊 Sound on",soundOff:"🔇 Sound off",reviewLbl:"Today's Review",reviewN:"{n} questions to review",reviewNow:"Review",allCaught:"All caught up 🎉",noReview:"No review needed right now.",reviewDone:"Review Complete!",clearedMsg:"{c} cleared · {r} still to review.",reviewAgain:"Keep Reviewing",mistakes:"Mistakes to Review",praise:["Correct!","Excellent!","Great job!","Perfect!","Keep it up!"],combo:"Combo",nextUp:"Next",backHome:"Home",dailyGoal:"Daily Goal",goalDone:"🎉 Daily goal reached!",courseProg:"Course Progress",streakMile:"🔥 {n} days in a row! Amazing!",navHome:"Map",navProfile:"Profile",achTitle:"Achievements",statLessons:"Lessons",statStreak:"Day Streak",student:"Touch Student",editName:"Edit name",saveName:"Save",cpSub:"Pre-Beginner Level",startFlag:"START HERE",toNext:"{n} XP to Lv {lv}",listen:"Listening Match",meaningIs:"Meaning:",nlTag:"Next Level",nlLocked:"Locked · {n}/25 lessons",nlSoon:"Coming soon 🎉",obTitle:"Welcome! 👋",obSkip:"Skip",speakTitle:"Speak Up",record:"Record",stopBtn:"Stop",play:"Play",tryAgain:"Try Again",speakSay:"Say this sentence:",recState:"Recording…",getReady:"Get ready…",speakNow:"Speak now!",saving:"Saving…",vocabSub:"先认读这些单词，再继续。",tapSpk:"点喇叭按钮听单词发音；点选词块时也会自动朗读。",patternsSub:"___ 是可替换的位置。",fillSub:"选出正确的词。",subSub:"点选一个词，替换进句型。",subBuilt:"很好！你造了这个句子：",orderSub:"点击单词，排出正确顺序。",transSub:"把句子翻译成英文（点词组句）。",mcqSub:"选出最合适的答案。",dialogSub:"点词组句，完成你的台词。",bossSub:"无提示！靠自己完成对话。",reviewFrom:"来自你之前做错的题目，答对后会从这里移除。",quit:"退出本关？本关进度不会保存。",menuSub:"切换解释语言，或把进度保存到本设备（进度也会自动保存）。",saved:"✓ 已保存到本设备（刷新后会恢复）",savedMem:"已保存到本次会话（此浏览器不支持本地存储）",listenSub:"点喇叭听发音，再点对应的英文单词，把它们配对。",nlDesc:"学会日常交流中基础的单词、短语和语法概念：一般现在时、家庭成员、购物与钱、问路指路。",nlToastLocked:"完成全部 25 关即可解锁 Level 1。继续加油！",nlToastSoon:"🎉 你已完成 Pre-Beginner！Level 1 正在制作中，敬请期待。",obSub:"我们要怎么称呼你？你的名字会出现在练习里（例如 My name is …），之后也可以在 Profile 里修改。",obHello:"你好，{name}！",listenMuted:"声音已关闭，本听力练习已跳过。想练听力可在右上角打开声音。",speakSub:"先开口说，再听听自己的声音；想重来就再录一次。不评分、不上传，录音只保存在你自己的设备里。",speakDenied:"无法使用麦克风（可能未授权）。没关系，点 Continue 继续，不影响通关。",speakSaved:"✓ 已录好，保存在本机。点 Play 听听自己的发音！",speakSavedHint:"找到你上次的录音了，点 Play 可以回听，或再录一次。",speakWaitHint:"按 Record 后先别说话——看到 “Speak now” 再开始说，录音会更完整。"},
+ ms:{continue:"Continue",check:"Check",start:"Start",resume:"Resume",startLesson:"Start Lesson",correct:"Correct!",wrong:"Not quite",answerIs:"Correct answer:",vocab:"Vocabulary",patterns:"Sentence Patterns",fill:"Fill in the Blank",sub:"Substitution",order:"Word Order",trans:"Translation",mcq:"Multiple Choice",dialog:"Dialogue",boss:"BOSS CHALLENGE",lessonDone:"Lesson Complete!",bossDone:"Boss Defeated!",resSub:"Lesson complete. Next lesson unlocked.",accuracy:"Accuracy",locked:"Locked",done:"Done",go:"In progress",new:"Start",lesson:"Lesson",lessonU:"",module:"Module",bonus:"Completion bonus",bossBonus:"Boss bonus",heroNew:"Start your English journey here.",heroCont:"Continue where you left off.",allDone:"Congratulations! You finished the whole Pre-Beginner Level! 🎉",step:"Step",sceneLbl:"Scene",you:"You",changeLang:"Change explanation language?",menuTitle:"Menu",cancel:"Close",saveLocal:"Save to Device",quitYes:"Quit",quitNo:"Keep Learning",soundOn:"🔊 Sound on",soundOff:"🔇 Sound off",reviewLbl:"Today's Review",reviewN:"{n} questions to review",reviewNow:"Review",allCaught:"All caught up 🎉",noReview:"No review needed right now.",reviewDone:"Review Complete!",clearedMsg:"{c} cleared · {r} still to review.",reviewAgain:"Keep Reviewing",mistakes:"Mistakes to Review",praise:["Correct!","Excellent!","Great job!","Perfect!","Keep it up!"],combo:"Combo",nextUp:"Next",backHome:"Home",dailyGoal:"Daily Goal",goalDone:"🎉 Daily goal reached!",courseProg:"Course Progress",streakMile:"🔥 {n} days in a row! Amazing!",navHome:"Map",navProfile:"Profile",achTitle:"Achievements",statLessons:"Lessons",statStreak:"Day Streak",student:"Touch Student",editName:"Edit name",saveName:"Save",cpSub:"Pre-Beginner Level",startFlag:"START HERE",toNext:"{n} XP to Lv {lv}",listen:"Listening Match",meaningIs:"Meaning:",nlTag:"Next Level",nlLocked:"Locked · {n}/25 lessons",nlSoon:"Coming soon 🎉",obTitle:"Welcome! 👋",obSkip:"Skip",speakTitle:"Speak Up",record:"Record",stopBtn:"Stop",play:"Play",tryAgain:"Try Again",speakSay:"Say this sentence:",recState:"Recording…",getReady:"Get ready…",speakNow:"Speak now!",saving:"Saving…",vocabSub:"Baca dan ingat perkataan ini dahulu.",tapSpk:"Tekan butang pembesar suara untuk dengar sebutan; perkataan juga dibaca apabila ditekan.",patternsSub:"___ ialah slot yang boleh diganti.",fillSub:"Pilih perkataan yang betul.",subSub:"Tekan satu perkataan untuk diganti ke dalam pola.",subBuilt:"Bagus! Anda membina ayat ini:",orderSub:"Tekan perkataan mengikut susunan yang betul.",transSub:"Terjemah ke Bahasa Inggeris (tekan perkataan).",mcqSub:"Pilih jawapan yang paling sesuai.",dialogSub:"Tekan perkataan untuk melengkapkan dialog anda.",bossSub:"Tiada petunjuk! Lengkapkan dialog sendiri.",reviewFrom:"Daripada jawapan yang anda silap; jawab betul untuk mengeluarkannya.",quit:"Keluar? Kemajuan pelajaran ini tidak disimpan.",menuSub:"Tukar bahasa penerangan atau simpan kemajuan ke peranti ini (kemajuan juga disimpan secara automatik).",saved:"✓ Disimpan ke peranti ini (kekal selepas muat semula)",savedMem:"Disimpan untuk sesi ini sahaja (pelayar tidak menyokong storan)",listenSub:"Tekan pembesar suara untuk dengar, kemudian tekan perkataan Inggeris yang sepadan.",nlDesc:"Pelajari perkataan, frasa dan konsep tatabahasa asas untuk komunikasi harian: present simple, ahli keluarga, membeli-belah & wang, bertanya arah.",nlToastLocked:"Tamatkan semua 25 pelajaran untuk membuka Level 1. Teruskan!",nlToastSoon:"🎉 Anda telah tamat Pre-Beginner! Level 1 sedang dibina.",obSub:"Apa nama anda? Nama anda akan muncul dalam latihan (cth. My name is …). Anda boleh menukarnya di Profile bila-bila masa.",obHello:"Hai, {name}!",listenMuted:"Bunyi dimatikan, latihan mendengar ini dilangkau. Hidupkan bunyi di penjuru atas untuk mencubanya.",speakSub:"Cakap dahulu, kemudian dengar suara anda sendiri; rakam semula jika mahu. Tiada markah, tiada muat naik — rakaman disimpan dalam peranti anda sahaja.",speakDenied:"Mikrofon tidak dapat digunakan (mungkin tiada kebenaran). Tidak mengapa, tekan Continue untuk teruskan.",speakSaved:"✓ Rakaman disimpan dalam peranti ini. Tekan Play untuk dengar sebutan anda!",speakSavedHint:"Rakaman lepas anda dijumpai. Tekan Play untuk dengar, atau rakam semula.",speakWaitHint:"Selepas tekan Record, tunggu dahulu — mula bercakap hanya apabila “Speak now” muncul supaya rakaman lengkap."},
+ en:{continue:"Continue",check:"Check",start:"Start",resume:"Resume",startLesson:"Start Lesson",correct:"Correct!",wrong:"Not quite",answerIs:"Correct answer:",vocab:"Vocabulary",patterns:"Sentence Patterns",fill:"Fill in the Blank",sub:"Substitution",order:"Word Order",trans:"Translation",mcq:"Multiple Choice",dialog:"Dialogue",boss:"BOSS CHALLENGE",lessonDone:"Lesson Complete!",bossDone:"Boss Defeated!",resSub:"Lesson complete. Next lesson unlocked.",accuracy:"Accuracy",locked:"Locked",done:"Done",go:"In progress",new:"Start",lesson:"Lesson",lessonU:"",module:"Module",bonus:"Completion bonus",bossBonus:"Boss bonus",heroNew:"Start your English journey here.",heroCont:"Continue where you left off.",allDone:"Congratulations! You finished the whole Pre-Beginner Level! 🎉",step:"Step",sceneLbl:"Scene",you:"You",changeLang:"Change explanation language?",menuTitle:"Menu",cancel:"Close",saveLocal:"Save to Device",quitYes:"Quit",quitNo:"Keep Learning",soundOn:"🔊 Sound on",soundOff:"🔇 Sound off",reviewLbl:"Today's Review",reviewN:"{n} questions to review",reviewNow:"Review",allCaught:"All caught up 🎉",noReview:"No review needed right now.",reviewDone:"Review Complete!",clearedMsg:"{c} cleared · {r} still to review.",reviewAgain:"Keep Reviewing",mistakes:"Mistakes to Review",praise:["Correct!","Excellent!","Great job!","Perfect!","Keep it up!"],combo:"Combo",nextUp:"Next",backHome:"Home",dailyGoal:"Daily Goal",goalDone:"🎉 Daily goal reached!",courseProg:"Course Progress",streakMile:"🔥 {n} days in a row! Amazing!",navHome:"Map",navProfile:"Profile",achTitle:"Achievements",statLessons:"Lessons",statStreak:"Day Streak",student:"Touch Student",editName:"Edit name",saveName:"Save",cpSub:"Pre-Beginner Level",startFlag:"START HERE",toNext:"{n} XP to Lv {lv}",listen:"Listening Match",meaningIs:"Meaning:",nlTag:"Next Level",nlLocked:"Locked · {n}/25 lessons",nlSoon:"Coming soon 🎉",obTitle:"Welcome! 👋",obSkip:"Skip",speakTitle:"Speak Up",record:"Record",stopBtn:"Stop",play:"Play",tryAgain:"Try Again",speakSay:"Say this sentence:",recState:"Recording…",getReady:"Get ready…",speakNow:"Speak now!",saving:"Saving…",vocabSub:"Read and remember these words first.",tapSpk:"Tap the speaker button to hear the word; words are also spoken when you tap them.",patternsSub:"___ is a slot you can replace.",fillSub:"Choose the correct word.",subSub:"Tap one word to put into the pattern.",subBuilt:"Good! You made this sentence:",orderSub:"Tap the words in the correct order.",transSub:"Translate into English (tap the words).",mcqSub:"Choose the best answer.",dialogSub:"Tap the words to finish your line.",bossSub:"No hints! Finish the dialogue by yourself.",reviewFrom:"From answers you missed; answer correctly to clear them.",quit:"Quit this lesson? Progress will not be saved.",menuSub:"Change the explanation language or save progress to this device (progress also saves automatically).",saved:"✓ Saved to this device (kept after refresh)",savedMem:"Saved for this session only (browser storage unavailable)",listenSub:"Tap a speaker to listen, then tap the matching English word.",nlDesc:"Learn basic words, phrases and grammar for everyday communication: present simple, family, shopping & money, asking for directions.",nlToastLocked:"Complete all 25 lessons to unlock Level 1. Keep going!",nlToastSoon:"🎉 You finished Pre-Beginner! Level 1 is coming soon.",obSub:"What should we call you? Your name will appear inside the exercises (e.g. My name is …). You can change it in Profile anytime.",obHello:"Hello, {name}!",listenMuted:"Sound is off, so this listening exercise is skipped. Turn sound on (top right) to try it.",speakSub:"Speak first. Listen to yourself. Try again if you want. No score, no upload — your recording stays on your own device.",speakDenied:"Microphone unavailable (permission may be blocked). No problem — tap Continue to move on.",speakSaved:"✓ Recorded and saved on this device. Tap Play to hear yourself!",speakSavedHint:"Found your last recording. Tap Play to listen, or record again.",speakWaitHint:"Wait for “Speak now” before speaking — your recording will be complete."}
 };
 const MASCOT_SVG = '<svg viewBox="0 0 78 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
  +'<ellipse cx="39" cy="90" rx="22" ry="5" fill="rgba(27,36,51,.10)"/>'
@@ -622,13 +623,18 @@ function speak(txt, btn){
 
 /* ---------- Speak Up: local-only voice recording ---------- */
 const CANREC = !!(window.MediaRecorder && navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.indexedDB);
-let REC = {recorder:null, stream:null, audio:null};
+let REC = {recorder:null, stream:null, audio:null, timers:[]};
+function recTimer(fn, ms){ const id = setTimeout(fn, ms); REC.timers.push(id); return id; }
 function killRec(){
+ REC.timers.forEach(clearTimeout);
  try{ if(REC.recorder && REC.recorder.state==="recording") REC.recorder.stop(); }catch(e){}
  try{ if(REC.stream) REC.stream.getTracks().forEach(tr=>tr.stop()); }catch(e){}
  try{ if(REC.audio){ REC.audio.pause(); } }catch(e){}
- REC = {recorder:null, stream:null, audio:null};
+ REC = {recorder:null, stream:null, audio:null, timers:[]};
 }
+const CD_TICK = 650;     // countdown pace (ms per number)
+const HEAD_BUF = 400;    // recorder warm-up before "Speak now" (protects the first syllable)
+const TAIL_BUF = 450;    // keep recording after Stop (protects the last syllable)
 function recDB(){
  return new Promise((res,rej)=>{
   const r = indexedDB.open("te_speakup", 1);
@@ -1261,44 +1267,79 @@ function renderStep(){
      <button class="btn btn-rec on hidden" id="stoprec">■ ${t.stopBtn}</button>
      <button class="btn btn-primary" id="playrec" disabled>▶ ${t.play}</button>
     </div>
-    <div class="speaknote" id="speaknote"></div>`,
+    <div class="speaknote" id="speaknote">${esc(t.speakWaitHint)}</div>`,
    `<button class="btn btn-ghost btn-block" id="go">${t.continue}</button>`);
-  let blob = null, awarded = false, chunks = [];
+  let blob = null, awarded = false, chunks = [], phase = "idle";
   const stat = $("recstatus");
-  function ui(state){
-   $("recbtn").classList.toggle("hidden", state==="recording");
-   $("stoprec").classList.toggle("hidden", state!=="recording");
-   $("playrec").disabled = !blob || state==="recording";
+  function uiIdle(){
+   phase = "idle";
+   $("recbtn").classList.remove("hidden");
+   $("stoprec").classList.add("hidden");
+   $("stoprec").disabled = false;
+   $("playrec").disabled = !blob;
    $("recbtn").innerHTML = blob ? "↻ "+t.tryAgain : "● "+t.record;
-   stat.innerHTML = state==="recording" ? `<span class="recdot"></span>${esc(t.recState)}` : "";
+   stat.textContent = "";
+   stat.classList.remove("go");
   }
-  // a recording from a previous session? load it from IndexedDB
-  recLoad(key).then(b=>{ if(b && !blob){ blob = b; ui("idle"); $("speaknote").textContent = t.speakSavedHint; } });
+  // restore a recording from a previous session (IndexedDB)
+  recLoad(key).then(b=>{ if(b && !blob && phase==="idle"){ blob = b; uiIdle(); $("speaknote").textContent = t.speakSavedHint; } });
   $("recbtn").onclick = async ()=>{
+   if(phase!=="idle") return;
+   phase = "prep";
    try{
-    killRec(); chunks = [];
+    chunks = [];
     REC.stream = await navigator.mediaDevices.getUserMedia({audio:true});
-    REC.recorder = new MediaRecorder(REC.stream);
-    REC.recorder.ondataavailable = e=>{ if(e.data && e.data.size!==0 || e.data) chunks.push(e.data); };
-    REC.recorder.onstop = ()=>{
-     blob = new Blob(chunks, {type: REC.recorder.mimeType || "audio/webm"});
-     try{ REC.stream.getTracks().forEach(tr=>tr.stop()); }catch(e){}
-     ui("idle");
-     recSave(key, blob);
-     if(!awarded){ awarded = true; P.xp += 5; $("sessxp").textContent = P.xp; xpFloat(5); }
-     $("speaknote").textContent = t.speakSaved;
-    };
-    REC.recorder.start();
-    ui("recording");
    }catch(e){
-    stat.textContent = "";
+    phase = "idle";
     $("speaknote").textContent = t.speakDenied;
+    return;
    }
+   // ---- Get ready… 3 · 2 · 1 (mic is live; student must NOT speak yet) ----
+   $("recbtn").classList.add("hidden");
+   $("stoprec").classList.add("hidden");
+   stat.classList.remove("go");
+   let n = 3;
+   phase = "count";
+   stat.textContent = t.getReady+" "+n;
+   const tick = ()=>{
+    n--;
+    if(n>0){ stat.textContent = t.getReady+" "+n; recTimer(tick, CD_TICK); return; }
+    // ---- start the recorder EARLY, before "Speak now" (head buffer) ----
+    try{
+     REC.recorder = new MediaRecorder(REC.stream);
+     REC.recorder.ondataavailable = e=>{ if(e.data) chunks.push(e.data); };
+     REC.recorder.onstop = ()=>{
+      blob = new Blob(chunks, {type: REC.recorder.mimeType || "audio/webm"});
+      try{ REC.stream.getTracks().forEach(tr=>tr.stop()); }catch(e){}
+      recSave(key, blob);
+      if(!awarded){ awarded = true; P.xp += 5; $("sessxp").textContent = P.xp; xpFloat(5); }
+      $("speaknote").textContent = t.speakSaved;
+      uiIdle();
+     };
+     REC.recorder.start();
+    }catch(e){ $("speaknote").textContent = t.speakDenied; uiIdle(); return; }
+    phase = "buffer";
+    recTimer(()=>{
+     phase = "speaking";
+     stat.classList.add("go");
+     stat.textContent = "🟢 "+t.speakNow;
+     $("stoprec").classList.remove("hidden");
+    }, HEAD_BUF);
+   };
+   recTimer(tick, CD_TICK);
   };
-  $("stoprec").onclick = ()=>{ try{ if(REC.recorder && REC.recorder.state==="recording") REC.recorder.stop(); }catch(e){} };
-  $("playrec").onclick = ()=>{ if(blob) playBlob(blob); };
+  $("stoprec").onclick = ()=>{
+   if(phase!=="speaking") return;
+   phase = "saving";
+   $("stoprec").disabled = true;
+   stat.classList.remove("go");
+   stat.textContent = t.saving;
+   // ---- tail buffer: keep capturing a little after Stop so the last word survives ----
+   recTimer(()=>{ try{ if(REC.recorder && REC.recorder.state==="recording") REC.recorder.stop(); }catch(e){ uiIdle(); } }, TAIL_BUF);
+  };
+  $("playrec").onclick = ()=>{ if(blob && phase==="idle") playBlob(blob); };
   $("go").onclick = ()=>nextStep();
-  ui("idle");
+  uiIdle();
   return;
  }
 }
